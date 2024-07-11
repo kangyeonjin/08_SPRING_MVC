@@ -1,10 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>main</title>
 </head>
 <body>
-$END$
+
+<!--파일전송규칙-->
+<!--1.post요청으로 보낸다 : 바이너리 파일은 문자열이 길기때문에
+get요청으로 보낼경우 파일이 잘리게된다
+2. 파일업로드객체임을 알려줘야한다.
+enctype지정(multipart/form-data)-->
+
+<h1>single file업로드하기</h1>
+<form action="/single-file" method="post" enctype="multipart/form-data">
+    파일 :<input type="file" name="singleFile"><br>
+    파일설명 :<input type="text" name="singleFileDescription"><br>
+    <input type="submit">
+</form>
+
+<h1>multi file업로드하기</h1>
+<form action="/multi-file" method="post" enctype="multipart/form-data">
+    파일 :<input type="file" name="multiFiles" multiple><br>
+    파일설명 :<input type="text" name="multiFileDescription"><br>
+    <input type="submit">
+</form>
+
+
 </body>
 </html>

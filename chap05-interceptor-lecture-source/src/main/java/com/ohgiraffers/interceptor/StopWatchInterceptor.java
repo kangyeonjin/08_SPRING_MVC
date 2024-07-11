@@ -16,6 +16,7 @@ import org.springframework.web.servlet.ModelAndView;
  * */
 public class StopWatchInterceptor implements HandlerInterceptor {
 
+
     private final MenuService menuService;
 
     public StopWatchInterceptor(MenuService menuService){
